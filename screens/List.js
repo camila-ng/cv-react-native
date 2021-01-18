@@ -1,5 +1,7 @@
 import React from "react";
-import ColorBox from '../components/ColorBox';
+import Button from '../components/Button';
+import { useNavigation } from '@react-navigation/native';
+
 import {
     View,
     SafeAreaView,
@@ -7,16 +9,16 @@ import {
     Text,
 } from "react-native";
 const List = () => {
-
+const navigation = useNavigation();
     return (
         <SafeAreaView style={styles.listContainer}>
             <View style={styles.listView}>
                 <Text style={styles.listTitle}></Text>
-                <ColorBox color={'#14d2b9'} title={'Mi Historia'} url="Profile"/>
-                <ColorBox color={'#14d2b9'} title={'Educación IT'} url="Education"/>
-                <ColorBox color={'#14d2b9'} title={'Experiencia Laboral'} url="Experience"/>
-                <ColorBox color={'#14d2b9'} title={'Hobbies'} url="Hobbies"/>
-                <ColorBox color={'#14d2b9'} title={'Contacto'} url="Contact" />
+                <Button color={'#14d2b9'} title={'Mi Historia'} onPress={() => navigation.push("Profile")}/>
+                <Button color={'#14d2b9'} title={'Educación IT'} onPress={() => navigation.push("Education")}/>
+                <Button color={'#14d2b9'} title={'Experiencia Laboral'} onPress={() => navigation.push("Experience")}/>
+                <Button color={'#14d2b9'} title={'Hobbies'} onPress={() => navigation.push("Hobbies")}/>
+                <Button color={'#14d2b9'} title={'Contacto'} onPress={() => navigation.push("Contact")} />
             </View>
         </SafeAreaView>
     );

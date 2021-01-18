@@ -1,17 +1,26 @@
 import React from 'react'
-import { SafeAreaView, View, Image, StyleSheet, Text } from 'react-native'
+import { SafeAreaView, View, StyleSheet, Text, ImageBackground } from 'react-native'
 
 const ProfileComponent = ({ title, subtitle, image }) => {
     return (
         <SafeAreaView>
+              <ImageBackground
+                    style={{
+                        height: '100%',
+                        width: '100%',
+                        resizeMode: 'cover',
+                    }
+                    }
+                    source={image}
+                >
             <View style={styles.profileContainer}>
+               <View style={styles.textContainer}>
                 <Text style={[styles.profileYears, styles.titleDescription]}>{title}</Text>
                 <Text style={[styles.profileDescription, styles.titleDescription]}>{subtitle}</Text>
-                <Image
-                    style={styles.teaching}
-                    source={image}
-                />
+                </View>
+              
             </View>
+            </ImageBackground>
         </SafeAreaView>
     )
 }
@@ -19,32 +28,31 @@ const ProfileComponent = ({ title, subtitle, image }) => {
 const styles = StyleSheet.create({
     profileContainer: {
         height: '100%',
-        justifyContent: "flex-end",
+        position: 'relative',
+    },
+    textContainer:{
+        padding: 10,
+        height: '100%',
         display: 'flex',
+        justifyContent: 'center',
         alignItems: 'center',
     },
     titleDescription: {
-        top: 65,
-        zIndex: 9999,
-        color: '#282828',
-        // fontWeight: 'bold',
-        textShadowOffset: { width: 1, height: 1 },
-        textShadowRadius: 1,
-        textShadowColor: '#b5b5b5',
+        textAlign: 'center',
+        color: 'black',
+        textShadowOffset: { width: 0, height: 0 },
+        textShadowRadius: 8,
+        textShadowColor: '#ffff',
+
     },
     profileYears: {
-        fontSize: 60,
+        fontSize: 47,
+        marginBottom: 10,
     },
     profileDescription: {
-        width: '90%',
         fontSize: 20,
-        textAlign: 'center',
+        width: '90%',
     },
-    teaching: {
-        height: '80%',
-        width: '100%',
-        resizeMode: "cover",
-    }
 });
 
 

@@ -11,21 +11,20 @@ import Contact from './screens/Contact';
 
 const Stack = createStackNavigator();
 
+
 const App = () => {
 
   return (
     <NavigationContainer>
-    <Stack.Navigator initialRouteName="Home" screenOptions={{headerShown: false,}}>
-      <Stack.Screen name="Home" component={Home}/>
-      <Stack.Screen name="List" component={List} />
-      <Stack.Screen name="Profile" component={Profile} />
-      <Stack.Screen name="Education" component={ItEducation} />
-      <Stack.Screen name="Experience" component={Experience} />
-      <Stack.Screen name="Hobbies" component={Hobbies} />
-      <Stack.Screen name="Contact" component={Contact} />
-
-
-    </Stack.Navigator>
+      <Stack.Navigator initialRouteName="Home" screenOptions={{ headerShown: false, }}>
+        <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="List" component={List} />
+        <Stack.Screen name="Profile" component={Profile} />
+        <Stack.Screen name="Education" component={ItEducation} />
+        <Stack.Screen name="Experience" component={Experience} />
+        <Stack.Screen name="Hobbies" component={Hobbies} />
+        <Stack.Screen name="Contact" component={Contact} />
+      </Stack.Navigator>
     </NavigationContainer>
   );
 };

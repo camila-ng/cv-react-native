@@ -1,10 +1,12 @@
-import React from 'react'
-import { SafeAreaView, Text, View } from 'react-native'
+import React from 'react';
+import { SafeAreaView, Text, View } from 'react-native';
+import ItEducationComponent from '../components/ItEducationComponent';
+
 const ItEducation = () => {
     return (
         <SafeAreaView>
             <View>
-                <Text>ItEducation</Text>
+                <ItEducationComponent />
             </View>
         </SafeAreaView>
     )
