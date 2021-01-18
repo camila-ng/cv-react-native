@@ -18,7 +18,6 @@ const navigation = useNavigation();
                 <Button color={'#14d2b9'} title={'Educación IT'} onPress={() => navigation.push("Education")}/>
                 <Button color={'#14d2b9'} title={'Experiencia Laboral'} onPress={() => navigation.push("Experience")}/>
                 <Button color={'#14d2b9'} title={'Hobbies'} onPress={() => navigation.push("Hobbies")}/>
-                <Button color={'#14d2b9'} title={'Contacto'} onPress={() => navigation.push("Contact")} />
             </View>
         </SafeAreaView>
     );

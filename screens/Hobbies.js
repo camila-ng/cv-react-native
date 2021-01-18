@@ -33,6 +33,15 @@ const Hobbies = () => {
             <View>
                 <HobbiesComponent image={require("../assets/señor.jpg")} />
             </View>
+            <View>
+                <HobbiesComponent title={'También me gusta mucho la música, y hace cuatro años comencé a tocar el piano.'} image={require("../assets/background6.png")} />
+            </View>
+            <View>
+                <HobbiesComponent title={'Hace dos años descubrí el yoga, y practico desde entonces.'} image={require("../assets/background6.png")} />
+            </View>
+            <View>
+                <HobbiesComponent title={'Tengo muchos intereses, me encanta aprender sobre diferentes temas, pero estos son los que elijo tener presentes en mi dia a dia.'} image={require("../assets/background6.png")} />
+            </View>
         </Swiper>
     )
 }

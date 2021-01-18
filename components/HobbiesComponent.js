@@ -24,7 +24,7 @@ const HobbiesComponent = ({ image, title }) => {
 }
 const styles = StyleSheet.create({
     hobbiesTitle: {
-        fontSize: 50,
+        fontSize: 40,
     },
     hobbiesContainer: {
         height: '100%',
